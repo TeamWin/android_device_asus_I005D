@@ -15,4 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_I005D.mk
+    $(LOCAL_DIR)/twrp_I005D.mk \
+    $(LOCAL_DIR)/twrp_I005DS.mk

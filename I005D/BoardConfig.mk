@@ -24,7 +24,7 @@
 # components.
 
 # Default device path for tree
-DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(COMMON_FOLDER)
 
 # Inherit from asus sm8250-common
 -include device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common/BoardConfigCommon.mk
@@ -33,4 +33,5 @@ DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # TWRP specific build flags
-TW_LOAD_VENDOR_MODULES := "aw8697.ko focaltech_fts_rog.ko focaltech_fts_rog2.ko"
+TW_LOAD_VENDOR_MODULES := "focaltech_fts_rog.ko"
+TW_HAPTICS_TSPDRV := true

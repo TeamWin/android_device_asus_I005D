@@ -16,6 +16,9 @@
 #
 # Only the below variable(s) need to be changed!
 #
+# Identifier for common device tree folder
+COMMON_FOLDER := I005D
+
 # Identifier for common folder
 COMMON_SOC := sm8350
 
@@ -31,9 +34,6 @@ PRODUCT_PLATFORM := lahaina
 # Release name (automatically taken from this file's suffix)
 PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
 
-# Identifier for common device tree folder
-COMMON_FOLDER := $(PRODUCT_RELEASE_NAME)
-
 # Custom vendor used in build tree (automatically taken from this file's prefix)
 CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
 
@@ -47,8 +47,8 @@ BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(valu
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := $(CUSTOM_VENDOR)_$(PRODUCT_DEVICE)
 PRODUCT_BRAND := $(BOARD_VENDOR)
-PRODUCT_MODEL := $(shell echo $(PRODUCT_BRAND) | tr  '[:lower:]' '[:upper:]')_$(PRODUCT_DEVICE)
+PRODUCT_MODEL := $(shell echo $(PRODUCT_BRAND) | tr  '[:lower:]' '[:upper:]')_$(COMMON_FOLDER)
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)/device-$(PRODUCT_DEVICE).mk)
+$(call inherit-product, device/$(PRODUCT_BRAND)/$(COMMON_FOLDER)/device-$(PRODUCT_DEVICE).mk)

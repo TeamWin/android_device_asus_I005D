@@ -1,6 +1,8 @@
 [
   {
+    "remote": "TeamWin",
     "repository": "android_device_asus_sm8350-common",
-    "target_path": "device/asus/sm8350-common"
+    "target_path": "device/asus/sm8350-common",
+    "branch": "android-12.1"
   }
 ]

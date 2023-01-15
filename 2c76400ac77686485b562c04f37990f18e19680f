@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7045f542_d0e352ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1046
+      },
+      "writtenOn": "2023-01-15T15:09:39Z",
+      "side": 1,
+      "message": "With this change TWRP can now boot from fastboot :D (only tested on ROG Phone 5 tho)",
+      "revId": "2c76400ac77686485b562c04f37990f18e19680f",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}

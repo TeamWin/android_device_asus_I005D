@@ -29,6 +29,10 @@
 # Kernel prebuilts
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
+# TWRP specific build flags
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko aw8697.ko focaltech_fts_rog.ko focaltech_fts_rog2.ko msm_drm.ko q6_dlkm.ko swr_dlkm.ko swr_haptics_dlkm.ko texfat.ko tntfs.ko"
+TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+
 #
 # For local builds only
 #

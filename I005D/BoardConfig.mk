@@ -23,17 +23,13 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-# Inherit from OEM SoC-common
--include $(COMMON_PATH)/BoardConfigCommon.mk
+# Inherit from device common
+-include $(DEVICE_PATH)/BoardConfigCommon.mk
 
-# Kernel prebuilts
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-
-# TWRP specific build flags
+# TWRP device-specific build flags
 TW_HAPTICS_TSPDRV := true
 TW_NO_SCREEN_BLANK := true
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts_rog.ko focaltech_fts_rog2.ko msm_drm.ko q6_dlkm.ko texfat.ko tntfs.ko"
-TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 
 #
 # For local builds only

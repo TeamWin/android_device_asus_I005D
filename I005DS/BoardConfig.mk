@@ -34,6 +34,7 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko aw8697.ko focaltech_fts_rog.ko fo
 #
 # Custom TWRP Versioning
 ifneq ($(wildcard device/common/version-info/.),)
+    # device version is optional - the default value is "0" if nothing is set in device tree
     CUSTOM_TWRP_DEVICE_VERSION := 0
 endif
 #

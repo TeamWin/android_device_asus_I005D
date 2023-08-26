@@ -26,9 +26,5 @@
 # Inherit from OEM SoC-common
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
-# Kernel prebuilts
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-
 # TWRP specific build flags
 TW_FRAMERATE := 144
-TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true

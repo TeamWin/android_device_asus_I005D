@@ -29,7 +29,7 @@
 # TWRP device-specific build flags
 TW_HAPTICS_TSPDRV := true
 TW_NO_SCREEN_BLANK := true
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts_rog.ko focaltech_fts_rog2.ko msm_drm.ko q6_dlkm.ko texfat.ko tntfs.ko"
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts_rog.ko focaltech_fts_rog2.ko q6_dlkm.ko texfat.ko tntfs.ko"
 
 #
 # For local builds only

@@ -20,9 +20,5 @@
 # product configuration (apps).
 #
 
-# Inherit from OEM SoC-common
-$(call inherit-product, $(COMMON_PATH)/common.mk)
-
-# Prebuit files for recovery ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/$(PRODUCT_RELEASE_NAME)/device-prebuilt/recovery,$(TARGET_COPY_OUT_RECOVERY)/root)
+# Inherit from device-common
+$(call inherit-product, $(DEVICE_PATH)/device-common.mk)

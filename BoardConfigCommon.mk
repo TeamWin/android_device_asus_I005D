@@ -26,5 +26,10 @@
 # Inherit from OEM SoC-common
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
+# Prebuit files for recovery ramdisk
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilt/recovery,$(TARGET_COPY_OUT_RECOVERY)/root) \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/$(PRODUCT_RELEASE_NAME)/device-prebuilt/recovery,$(TARGET_COPY_OUT_RECOVERY)/root)
+
 # TWRP specific build flags
 TW_FRAMERATE := 144

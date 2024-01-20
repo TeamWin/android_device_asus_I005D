@@ -36,9 +36,11 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts_rog.ko focaltech_ft
 # For local builds only
 #
 # Custom TWRP Versioning
-ifneq ($(wildcard device/common/version-info/.),)
-    # device version is optional - the default value is "0" if nothing is set in device tree
-    CUSTOM_TWRP_DEVICE_VERSION := 0
+ifneq ($(USE_CUSTOM_VERSION),)
+    ifneq ($(wildcard device/common/version-info/.),)
+        # device version is optional - the default value is "0" if nothing is set in device tree
+        CUSTOM_TWRP_DEVICE_VERSION := 0
+    endif
 endif
 #
 # end local build flags
